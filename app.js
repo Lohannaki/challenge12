@@ -97,7 +97,7 @@ const getForecastInfo = async () => {
 const getTrainInfo = async () => {
   
   const position = await getPosition(); 
-  const apiUrl = `http://transport.opendata.ch/v1/locations?x=${position.lat}&y=${position.long}&type=station`; 
+  const apiUrl = `https://transport.opendata.ch/v1/locations?x=${position.lat}&y=${position.long}&type=station`; 
   const response = await fetch(apiUrl); 
 
   if (!response.ok) {
